@@ -26,9 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Redirect to Amazon when button is clicked
-    function redirect() {
-        window.location.href = 'https://www.amazon.com';
+    // Simulate click on wink
+    function simulateClick(element) {
+        if (element) {
+            element.click();
+        }
     }
 
     // Add wink listener to control the cursor and interact with elements
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (rect.left <= x && x <= rect.right && rect.top <= y && y <= rect.bottom) {
                 // Simulate a click on the element if wink is detected
                 if (data.winking) {
-                    element.click();
+                    simulateClick(element);
                 }
             }
         }
